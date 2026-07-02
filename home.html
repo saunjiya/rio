@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rio Hotel | Luxury Himalayan Stay</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins;
+  color: #222;
+  background: #f6f6f6;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 50px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+nav h2 {
+  font-family: "Playfair Display";
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* HERO PARALLAX */
+.hero {
+  height: 100vh;
+  background: url('./1.jpg') center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-family: "Playfair Display";
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #c9a227;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 10%;
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h2 {
+  font-family: "Playfair Display";
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* PARALLAX BANNER 1 */
+.parallax {
+  height: 60vh;
+  background: url('./2.jpg') center/cover fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.parallax h2 {
+  color: white;
+  position: relative;
+  font-size: 2.5rem;
+  font-family: "Playfair Display";
+}
+
+/* ROOMS */
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.room {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.room:hover {
+  transform: translateY(-10px);
+}
+
+.room img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-content {
+  padding: 15px;
+}
+
+/* SECOND PARALLAX */
+.parallax2 {
+  height: 50vh;
+  background: url('./3.jpg') center/cover fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.parallax2 h2 {
+  color: white;
+  position: relative;
+  font-family: "Playfair Display";
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+/* TOURIST DESTINATIONS */
+
+.tourist-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.place{
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.place:hover{
+  transform:translateY(-10px);
+}
+
+.place img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.place-content{
+  padding:18px;
+}
+
+.place-content h3{
+  font-family:"Playfair Display";
+  margin-bottom:10px;
+}
+
+.place-content p{
+  color:#555;
+  line-height:1.6;
+}
+#contact {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8fbff, #eef6ff);
+}
+
+.contact-card {
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.location {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.whatsapp:hover {
+  background: #1da851;
+  transform: translateY(-3px);
+}
+
+.call {
+  background: #2563eb;
+  color: #fff;
+}
+
+.call:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>Rio Hotel</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#tourist">Tourist Places</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Rio Hotel</h1>
+    <p>Luxury Himalayan Stay in Pithoragarh</p>
+    <a class="btn" href="https://wa.me/8474982333">Book on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about">
+    <h2>Luxury in the Himalayas</h2>
+    <p>Rio Hotel offers peaceful mountain views, premium comfort, and unforgettable hospitality in the heart of Uttarakhand.</p>
+  </div>
+</section>
+
+<!-- PARALLAX 1 -->
+<div class="parallax">
+  <h2>Surrounded by Majestic Mountains</h2>
+</div>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <h2 style="text-align:center; margin-bottom:40px; font-family:Playfair Display;">Our Rooms</h2>
+
+  <div class="rooms">
+
+    <div class="room">
+      <img src="deluxe.jpg">
+      <div class="room-content">
+        <h3>Deluxe Room</h3>
+        <p>Mountain view comfort stay</p>
+      </div>
+    </div>
+
+    <div class="room">
+      <img src="premium.webp">
+      <div class="room-content">
+        <h3>Premium Suite</h3>
+        <p>Luxury Himalayan experience</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PARALLAX 2 -->
+<div class="parallax2">
+  <h2>Peaceful Nature Escape</h2>
+</div>
+<!-- TOURIST DESTINATIONS -->
+
+<section id="tourist">
+
+<h2 style="text-align:center;
+margin-bottom:50px;
+font-family:'Playfair Display';
+font-size:2.6rem;">
+Tourist Destinations
+</h2>
+
+<div class="tourist-grid">
+
+<div class="place">
+<img src="adikailash.webp" alt="Adi Kailash">
+<div class="place-content">
+<h3>Adi Kailash</h3>
+<p>
+One of the holiest Himalayan peaks, Adi Kailash is known for its breathtaking scenery, spiritual significance and peaceful surroundings.
+</p>
+</div>
+</div>
+
+<div class="place">
+<img src="omparvat.jpg" alt="Om Parvat">
+<div class="place-content">
+<h3>Om Parvat</h3>
+<p>
+A sacred mountain famous for the naturally formed "Om (ॐ)" symbol visible on its snow-covered face.
+</p>
+</div>
+</div>
+
+<div class="place">
+<img src="darma.webp" alt="Darma Valley">
+<div class="place-content">
+<h3>Darma Valley</h3>
+<p>
+A beautiful Himalayan valley filled with alpine meadows, glaciers, waterfalls and picturesque villages.
+</p>
+</div>
+</div>
+
+<div class="place">
+<img src="Munsiyari.jpg" alt="Munsyari">
+<div class="place-content">
+<h3>Munsiyari</h3>
+<p>
+A popular hill station offering spectacular Panchachuli mountain views, trekking trails and rich local culture.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-card">
+    <h2>📞 Contact & Booking</h2>
+    <p class="location">📍 Pithoragarh, Uttarakhand</p>
+
+    <p class="contact-text">
+      Ready to plan your next adventure? Get in touch for bookings,
+      tour packages, or any travel-related queries. We're happy to help!
+    </p>
+
+    <div class="contact-buttons">
+      <a class="btn whatsapp" href="https://wa.me/918474982333" target="_blank">
+        💬 Chat on WhatsApp
+      </a>
+
+      <a class="btn call" href="tel:+918474982333">
+        📞 Call Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Rio Hotel | Himalayan Luxury Stay
+</footer>
+
+</body>
+</html>
